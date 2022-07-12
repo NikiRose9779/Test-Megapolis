@@ -35,6 +35,11 @@ class SomeController extends Controller{
     return view('some_reservet', ['data' => SomeModel::find($id)]);
   }
 
+  public function some_client_reservet(Request $req){
+    $id = $req->input('client');
+    return view('some_client_reservet', ['data' => Client::find($id)]);
+  }
+
   public function redact_resev($id){
     return view('redact_resev', ['data' => SomeModel::find($id), 'client' => Client::all()]);
   }

@@ -18,6 +18,8 @@
     <button type="submit">Поиск</button>
   </form>
 
+  
+  <hr>
   @yield('content')
 </body>
 </html>

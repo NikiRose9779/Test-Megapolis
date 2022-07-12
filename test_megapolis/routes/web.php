@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'App\Http\Controllers\SomeController@home_page')->name('home');
+Route::post('/some_client_reservet', 'App\Http\Controllers\SomeController@some_client_reservet')->name('some_client_reservet');
 Route::post('/add_reservat', 'App\Http\Controllers\SomeController@submit')->name('add_reservat');
 Route::get('/all_reservat', 'App\Http\Controllers\SomeController@all_reservet')->name('all_reservet');
 Route::post('/some_reservet', 'App\Http\Controllers\SomeController@some_reservet')->name('some_reservet');

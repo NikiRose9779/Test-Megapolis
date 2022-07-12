@@ -3,6 +3,21 @@
 @section('title')Главная@endsection
 
 @section('content')
+
+  <form action=" {{ route('some_client_reservet') }} " method="post">
+    @csrf
+    <p>Выберите клиента для поиска броней</p>
+    <select name="client" id="client">
+      <option value="">---</option>
+      @foreach($data as $x)
+        <option value="{{ $x->id }}">{{ $x->name }}</option>
+      @endforeach
+    </select>
+    <button type="submit">Поиск</button>
+  </form>
+
+  <hr>
+
   <form action="{{ route('add_reservat') }}" method="post">
     @csrf
 
